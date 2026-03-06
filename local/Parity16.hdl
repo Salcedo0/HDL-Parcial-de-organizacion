@@ -1,0 +1,22 @@
+
+CHIP Parity16 {
+    IN a[16];
+    OUT p;
+
+    PARTS:
+    Xor(a=a[0],  b=a[1],  out=x1);
+    Xor(a=x1,    b=a[2],  out=x2);
+    Xor(a=x2,    b=a[3],  out=x3);
+    Xor(a=x3,    b=a[4],  out=x4);
+    Xor(a=x4,    b=a[5],  out=x5);
+    Xor(a=x5,    b=a[6],  out=x6);
+    Xor(a=x6,    b=a[7],  out=x7);
+    Xor(a=x7,    b=a[8],  out=x8);
+    Xor(a=x8,    b=a[9],  out=x9);
+    Xor(a=x9,    b=a[10], out=x10);
+    Xor(a=x10,   b=a[11], out=x11);
+    Xor(a=x11,   b=a[12], out=x12);
+    Xor(a=x12,   b=a[13], out=x13);
+    Xor(a=x13,   b=a[14], out=x14);
+    Xor(a=x14,   b=a[15], out=p);
+}
