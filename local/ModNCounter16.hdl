@@ -9,7 +9,7 @@ CHIP ModNCounter16 {
     Inc16(in=curr, out=outPlus1);
 
     Or8Way(in=N[0..7], out=nLow);
-    Or8Way(in=N[8..16], out=nHigh);
+    Or8Way(in=N[8..15], out=nHigh);
     Or(a=nLow, b=nHigh, out=nNonZero);
 
     ALU(x=outPlus1, y=N, zx=false, nx=true, zy=false, ny=false, f=true, no=true, zr=incEqN);
